@@ -1,0 +1,24 @@
+.filters {
+  margin-top: 20px;
+  text-align: center;
+  .title{
+    text-align: center;
+    margin: 0;
+  }
+  hr{
+    margin-top:  0;
+  }
+  .wrapper {
+    padding: 10px;
+    margin: 5px;
+    .element {
+      background: #C6DF9E;
+      padding: 8px 20px;
+      border-radius: 5px;
+      text-align: center;
+      &:active, &:hover, &.active {
+        background: #7EB821;
+      }
+    }
+  }
+}

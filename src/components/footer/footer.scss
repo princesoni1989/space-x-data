@@ -1,0 +1,16 @@
+@import "../../styles/variables";
+
+.footer {
+  .copy-right {
+    background-color: $black1;
+    padding: 40px 0;
+    text-align: center;
+
+    span {
+      color: $grey1;
+      font-size: 14px;
+      line-height: 18px;
+      font-weight: 400;
+    }
+  }
+}
