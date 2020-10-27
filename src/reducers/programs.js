@@ -5,6 +5,12 @@ const initialState = {
   loading: true,
 }
 
+/**
+ * Reducer function
+ * @param state
+ * @param action
+ * @returns {{programs: *, loading: boolean}|{programs: [], loading: boolean}}
+ */
 export default function (state = initialState, action) {
   switch (action.type) {
     case FETCHING_PROGRAMS: {

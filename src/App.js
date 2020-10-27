@@ -16,7 +16,6 @@ function App() {
         <Route exact path="/" render={(props) => <Landing {...props} />} />
         <Route component={NotFound} />
       </Switch>
-
       <Footer />
     </div>
   )

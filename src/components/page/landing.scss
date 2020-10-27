@@ -1,10 +1,12 @@
+@import "../../styles/variables";
+
 .landing {
   min-height: 500px;
   padding: 10px;
   margin: auto;
 
   .cards {
-    box-shadow: 0 0 10px #dedede;
+    box-shadow: 0 0 10px $grey2;
     border-radius: 10px;
     padding: 10px;
     margin: 10px 0;
@@ -29,23 +31,23 @@
           padding: 5px;
 
           &.title {
-            color: #4A5796
+            color: $blue1
           }
 
           .key {
-            color: #000000;
+            color: $black;
             font-size: 14px;
             font-weight: bold;
           }
 
           .value {
-            color: #4A5796;
+            color: $blue1;
             font-size: 14px;
           }
 
           &.image-wrapper {
             text-align: center;
-            background: #F2F2F2;
+            background: $grey3;
             margin-bottom: 10px;
 
             .image {
@@ -58,14 +60,14 @@
       }
     }
   }
+  .loader {
+    position: absolute;
+    top: 20%;
+    right: 0;
+    //bottom: 0;
+    left: 0;
+    background: white;
+    z-index: 9999;
+  }
 }
 
-.loader {
-  position: absolute;
-  top: 20%;
-  right: 0;
-  //bottom: 0;
-  left: 0;
-  background: white;
-  z-index: 9999;
-}

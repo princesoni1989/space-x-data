@@ -30,14 +30,20 @@ class Landing extends Component {
   }
 
   onFilterChange(key, value) {
+    const queryKeys = {}
     const { filters } = this.state
     const { history } = this.props
     filters[key] = filters[key] === value ? "" : value
     this.setState({ filters }, () => {
-      const queryParams = queryString.stringify(filters)
+      Object.keys(filters).forEach((item) => {
+        if (filters[item]) {
+          queryKeys[item] = filters[item]
+        }
+      })
+      const queryParams = queryString.stringify(queryKeys)
       history.push({
         pathname: "/",
-        search: `?${new URLSearchParams(filters).toString()}`,
+        search: `?${new URLSearchParams(queryKeys).toString()}`,
       })
       this.props.fetchPrograms(`?${queryParams}`)
     })
@@ -45,7 +51,7 @@ class Landing extends Component {
 
   render() {
     const { programs, loading } = this.props.programs
-    const filters = this.state
+    const {filters} = this.state
     return (
       <div className="landing">
         <div className="inline-wrapper margin-offset">
